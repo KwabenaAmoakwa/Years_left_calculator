@@ -1,10 +1,7 @@
 from datetime import date
 
-# Date_of_birth = input("input your date of birth in this format(dd-mm-yyyy):")
-# Your_age = int(input("input your age:"))
+Date_of_birth = input("input your date of birth in this format(dd-mm-yyyy):")
 today = str(date.today())
-
-Date_of_birth = "14-07-1992"
 
 spl = Date_of_birth.split("-")
 dd = int(spl[0])
@@ -36,16 +33,20 @@ for i in days_in_months:
 for i in days_in_months:
     if mm2>x2:
         total_days2 += i
-        print(total_days2)
     elif mm2==x2:
         total_days2 += i - dd2
     x2+=1
-   
- 
-days_left = 36500 - total_days
 
-years = days_left//365
-months = (days_left - (years * 365))//12
-days = days_left-((years * 365) + (months * 12))
+#calculating the number of years between date of birth and current day
+total_years = yy2 - (yy + 1)
 
-#print(f"You currently have {days} days, {months} months, {years} years left")
+
+
+total_days_alive = total_days + total_days2 + (total_years * 365)
+total_days_left = 36500 - total_days_alive
+
+years = total_days_left//365
+months = (total_days_left - (years * 365))//30
+days = total_days_left-((years * 365) + (months * 30))
+
+print(f"You currently have {days} days, {months} months, {years} years left")
