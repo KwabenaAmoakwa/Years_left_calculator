@@ -49,4 +49,4 @@ years = total_days_left//365
 months = (total_days_left - (years * 365))//30
 days = total_days_left-((years * 365) + (months * 30))
 
-print(f"You currently have {days} days, {months} months, {years} years left")
+print(f"You currently have {years} years, {months} months and {days} days left")
