@@ -1,6 +1,6 @@
 from datetime import date
 
-Date_of_birth = input("input your date of birth in this format(dd-mm-yyyy):")
+Date_of_birth = input("input your date of birth in this format(dd-mm-yyyy):\n")
 today = str(date.today())
 
 spl = Date_of_birth.split("-")
